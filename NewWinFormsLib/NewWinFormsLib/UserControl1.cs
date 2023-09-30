@@ -21,7 +21,8 @@ namespace NewWinFormsLib
             InitializeComponent();
             comboBox.SelectedIndexChanged += (sender, e) =>
             _comboBoxSelectedElementChange?.Invoke(sender, e);
-
+            this.comboBox = new ComboBox();
+            this.Controls.Add(comboBox);
         }
 
         [Category("Свойства comboBox"),
